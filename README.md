@@ -1,6 +1,6 @@
 # 🧠 한국어 대화 요약 NLP 경진대회 실험 회고
 
-> **KoBART에서 Qwen3-14B까지 — 솔로 참가자의 80회 실험 기록**
+> **KoBART에서 Qwen3-14B까지 — 솔로 참가자의 103회 실험 기록**
 
 [![Public Score](https://img.shields.io/badge/Public%20Score-52.97-brightgreen?style=for-the-badge)]()
 [![Private Score](https://img.shields.io/badge/Private%20Score-50.01-blue?style=for-the-badge)]()
