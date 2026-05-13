@@ -190,26 +190,6 @@ baseline     실험              튜닝           PKO-T5        Qwen3-14B     + 
 > SAMSum은 messenger-like dialogue + concise third-person summary 특화  
 > — [SAMSum Corpus Paper (2019)](https://arxiv.org/abs/1911.12237)
 
----
-
-## 🚨 트러블슈팅 — SimPO 체크포인트 손상
-
-| 항목 | 내용 |
-|---|---|
-| **현상** | adapter_model.safetensors가 336MB로 저장 (정상: ~980MB) |
-| **결과** | 추론 불가, 백업 파일도 동일 손상 |
-| **원인 추정** | 서버 세션 중단 → 파일 쓰기 미완료, 디스크 용량 초과 |
-| **대응** | 멘토에게 DM 보고 → 정상 체크포인트 재수령 |
-| **교훈** | 학습 완료 후 파일 크기 검증 필수 + 외부 스토리지 이중 백업 |
-
-```bash
-# 체크포인트 크기 검증 예시
-import os
-ckpt_path = "checkpoints/adapter_model.safetensors"
-size_mb = os.path.getsize(ckpt_path) / (1024 * 1024)
-print(f"파일 크기: {size_mb:.1f} MB")
-assert size_mb > 900, f"체크포인트 손상 의심: {size_mb:.1f} MB"
-```
 
 ---
 
